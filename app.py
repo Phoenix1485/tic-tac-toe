@@ -87,7 +87,7 @@ app = FastAPI(title="TicTacToe Sessions Backend", version="1.0.0")
 if ALLOW_CORS:
     app.add_middleware(
         CORSMiddleware,
-        allow_origins=["http://127.0.0.1:5500"],
+        allow_origins=["http://127.0.0.1:5500", "https://fuzzy-xylophone-pxwqx59jp45f7gxp-5500.app.github.dev"],
         allow_credentials=True,
         allow_methods=["*"],
         allow_headers=["*"],
@@ -310,4 +310,5 @@ async def on_shutdown():
 # -----------------------------------------------------------------------------
 if __name__ == "__main__":
     import uvicorn, contextlib
+
     uvicorn.run("app:app", host="0.0.0.0", port=8000, reload=True)
