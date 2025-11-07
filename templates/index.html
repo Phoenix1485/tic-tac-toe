@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tic Tac Toe Multiplayer</title>
+    <script src="./static/index.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <meta name="theme-color" content="#1f2937" />
+</head>
+
+<body class="bg-gray-900 text-white flex flex-col items-center justify-center min-h-screen px-4">
+    <h1 class="text-3xl font-bold mb-6 text-center">Tic Tac Toe Multiplayer</h1>
+
+    <div class="mb-4 w-full max-w-xs">
+        <label for="playerName" class="block mb-2 text-sm font-medium">Spielername</label>
+        <input type="text" id="playerName"
+            class="w-full px-3 py-2 rounded bg-gray-800 text-white border border-gray-600 focus:outline-none focus:ring-2 focus:ring-blue-500"
+            placeholder="z. B. Len" />
+    </div>
+
+    
+    <div id="sessionControls" class="mt-6 w-full max-w-xs text-center space-y-4">
+        <button id="startBtn" class="px-4 py-2 bg-green-600 hover:bg-green-700 rounded transition duration-200 w-full">
+            Spiel starten
+        </button>
+
+        <div>
+            <label for="joinCodeInput" class="block mb-2 text-sm font-medium">Session-Code eingeben</label>
+            <input type="text" id="joinCodeInput"
+                class="w-full px-3 py-2 rounded bg-gray-800 text-white border border-gray-600 focus:outline-none focus:ring-2 focus:ring-blue-500"
+                placeholder="z. B. ABC123" />
+            <button id="joinBtn" class="mt-2 px-4 py-2 bg-yellow-600 hover:bg-yellow-700 rounded transition duration-200 w-full">
+                Beitreten
+            </button>
+        </div>
+
+        <div id="sessionCodeDisplay" class="mt-4 text-sm text-gray-300"></div>
+    </div>
+
+<div id="board" class="grid grid-cols-3 gap-2 w-full max-w-xs">
+        <!-- Zellen werden per JS erzeugt -->
+    </div>
+
+    <div id="status" class="mt-4 text-lg text-center"></div>
+
+    <button id="resetBtn" class="mt-6 px-4 py-2 bg-blue-600 hover:bg-blue-700 rounded transition duration-200">
+        Neustart
+    </button>
+
+</body>
+
+</html>
